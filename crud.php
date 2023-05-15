@@ -14,9 +14,34 @@ $pdo = new PDO($dsn, 'root', '');
         border: 1px solid lightblue;
         padding: 5px 8px;
     }
+    a.btn{
+        border:1px solid lightgreen;
+        padding: 5px 15px;
+        border-radius: 7px;
+        display: inline-block;
+        margin: 5px;
+        box-shadow: 2px 2px 10px green;
+        background-color: deepskyblue;
+        color: white;
+        text-decoration: none;
+        position: relative;
+        transition: all 0.5s;
+    }
+
+    a.btn:hover{
+        text-decoration: underline;
+        background-color: skyblue;
+        position: relative;
+        top: -3px;
+        transform: scale(1.1);
+        transition:all 0.5;
+    }
+
 </style>
 <!-- 用php＋html刻出一個school資料庫的資料表格 (義大利麵條式寫法>php跟html穿插) -->
 <h1>學生列表</h1>
+<!-- 做一個新增連結 -->
+<a class='btn' href="insert_form.php">新增學生資料</a>
 <table>
     <tr>
         <td>序號</td>
