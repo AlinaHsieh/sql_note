@@ -30,6 +30,9 @@ $pdo = new PDO($dsn, 'root', '');
         <td>電話</td>
         <td>科別</td>
         <td>畢業國中</td>
+        <!-- 增加資料表編輯＆刪除的欄位 -->
+        <td>編輯</td>
+        <td>刪除</td>
     </tr>
 
     <?php //用php抓資料，並使用迴圈print每一筆資料
@@ -51,6 +54,14 @@ $pdo = new PDO($dsn, 'root', '');
         <td><?=$row['telphone'];?></td>
         <td><?=$row['major'];?></td>
         <td><?=$row['secondary'];?></td>
+        <td>編輯</td>
+        <!-- 以下刪除只是示範，不是正確用法 -->
+        <!-- <td><a href="#" onclick="confirm('確定刪除嗎？')">刪除</a></td> -->
+
+        <!-- 改變作法如下：給一個參數>導向另一個頁面專門做刪除動作，刪除完畢後在header回來此頁 -->
+        <!-- 要帶“唯一可供參考的”值(id)才知道要刪除誰 >連到del.php頁面，後面接?(帶要接的值)-->
+        <td><a href="del.php?id=<?=$row['id'];?>">刪除</a></td>
+
     </tr>
     <?php
     }
