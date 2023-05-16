@@ -60,7 +60,7 @@ $row=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC); //從資料庫取一筆欄位�
 </div>
 
 <div>
-    <!-- 用隱藏欄位的方式將該筆欄位的id值帶到後端 edit.php -->
+    <!-- 用隱藏欄位的方式將該筆欄位的id值帶到後端 edit.php ,讓$sql語法“where `id`='{$_POST['id']}'”收得到id值-->
     <input type="hidden" name="id" value="<?=$row['id'];?>"> 
     <input type="submit" value="編輯"><input type="reset" value="重設"> 
 </div>
