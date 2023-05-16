@@ -8,6 +8,24 @@
 </head>
 <body>
     <h1>會員登入</h1>
+<?php
+if(isset($_GET['error'])){
+    echo "<span style='color:red'>";
+    switch($_GET['error']){
+        case 1:
+            echo "帳號或密碼錯誤";
+        break;
+        case 2:
+            echo "無法連線，請稍後再試";
+        break;
+        default:
+            echo "未知的錯誤";
+        break;
+    }
+    echo "</span>";
+}
+?>
+
 <form action="login.php" method="post">
 <p>
     <label for="acc">帳號：</label>
