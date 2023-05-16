@@ -5,7 +5,7 @@ $pdo = new PDO($dsn, 'root', '');
 <style>
     table {
         border-collapse: collapse;
-        width: 70%;
+        width: 80%;
         min-width: 800px;
 
     }
@@ -79,7 +79,7 @@ $pdo = new PDO($dsn, 'root', '');
         <td><?=$row['telphone'];?></td>
         <td><?=$row['major'];?></td>
         <td><?=$row['secondary'];?></td>
-        <td>編輯</td>
+        <td><a href="edit_form.php?id=<?=$row['id'];?>">編輯</a></td>
         <!-- 以下刪除只是示範，不是正確用法 -->
         <!-- <td><a href="#" onclick="confirm('確定刪除嗎？')">刪除</a></td> -->
 
