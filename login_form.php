@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>會員登入</h1>
-<form action="">
+<form action="login.php" method="post">
 <p>
     <label for="acc">帳號：</label>
     <input type="text" name="acc" id="acc">
