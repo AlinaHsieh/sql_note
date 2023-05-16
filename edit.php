@@ -13,6 +13,7 @@ $sql="update students set
     `major`='{$_POST['major']}', 
     `secondary`='{$_POST['secondary']}' 
 where `id`='{$_POST['id']}'";
+//呼應edit_form.php，id欄位也不下update指令，讓人修改
  
  
 $pdo->exec($sql); //送到資料庫執行

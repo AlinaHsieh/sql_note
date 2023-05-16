@@ -19,6 +19,10 @@ $row=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC); //從資料庫取一筆欄位�
     
 <!-- 用$row['']把從資料庫拿到的某筆id資料的內容，對應欄位顯示在表單上 -->
 <div>
+    <!-- 唯一的欄位不提供編輯(會牽連到其他關聯資料庫，所以只能顯示不能改) -->
+    <label for="">編號：</label><?=$row['id'];?> 
+</div>
+<div>
     <label for="">學號</label>
     <input type="text" name="uni_id" value="<?=$row['uni_id'];?>">
 </div>
